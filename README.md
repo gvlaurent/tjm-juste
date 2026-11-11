@@ -8,10 +8,13 @@
 
 Pour les consultants et freelances qui veulent fixer leur TJM sur un calcul, pas au doigt mouillé.
 
+### [▶ Essayer TJM Juste](https://gvlaurent.github.io/tjm-juste/)
+
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-94%20passent-2EA44F)
+[![Déploiement](https://github.com/gvlaurent/tjm-juste/actions/workflows/deploy.yml/badge.svg)](https://github.com/gvlaurent/tjm-juste/actions/workflows/deploy.yml)
 ![Sans serveur](https://img.shields.io/badge/serveur-aucun-555)
 
 <img src="docs/apercu.png" alt="TJM Juste : un TJM de 500 € donne un revenu net de 5 287,50 € par mois, avec le détail ligne par ligne" width="820" />
@@ -64,7 +67,9 @@ Le calcul inverse (revenu → TJM) applique la formule exacte à l'envers, puis 
 
 ## Lancer l'app
 
-Prérequis : Node.js.
+En ligne : **[gvlaurent.github.io/tjm-juste](https://gvlaurent.github.io/tjm-juste/)**, rien à installer.
+
+En local (prérequis : Node.js) :
 
 ```bash
 npm install
@@ -83,6 +88,7 @@ npm run dev        # puis ouvrir http://127.0.0.1:5173/
 - `src/tjm.ts` : toute la logique (lecture des saisies, validation, calcul, calcul inverse) en fonctions pures, sans React. Elle se teste et se relit isolément.
 - `src/tjm.test.ts` : cas de référence calculés à la main, allers-retours TJM ⇄ revenu sur les deux assiettes, propriétés (le TJM renvoyé atteint l'objectif, et ce TJM moins 1 € ne l'atteint pas), cas limites et données enregistrées corrompues.
 - `src/App.tsx` : le formulaire, le détail et l'avertissement.
+- `.github/workflows/deploy.yml` : à chaque push sur `main`, lance les tests, construit l'app et la publie sur GitHub Pages. Si un test échoue, rien n'est publié.
 
 ## Comment ce projet a été construit
 

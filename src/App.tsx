@@ -132,7 +132,7 @@ function App() {
     <main>
       <header>
         <h1>
-          <img className="logo" src="/favicon.svg" alt="" width="48" height="46" />
+          <img className="logo" src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="48" height="46" />
           TJM Juste
         </h1>
         <p className="notice">
