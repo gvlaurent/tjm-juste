@@ -49,6 +49,7 @@ const EMPTY: RawInputs = {
   taxRate: '',
 }
 
+// Kept from the project's former name (Calculateur TJM) so saved inputs survive the rename.
 const STORAGE_KEY = 'calculateur-tjm'
 
 // Storage can be missing or blocked (private window, browser settings):
@@ -132,7 +133,7 @@ function App() {
       <header>
         <h1>
           <img className="logo" src="/favicon.svg" alt="" width="48" height="46" />
-          Calculateur TJM
+          TJM Juste
         </h1>
         <p className="notice">
           Modèle simplifié. Les taux sont ceux que vous saisissez : vérifiez-les
